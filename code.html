@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-  <title>App Name: A Coding Project By Joy Dutta</title>
+  <title>ECHOVERSE: A Coding Project By Joy Dutta</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,6 +10,11 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+   <!-- Google Fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
 
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/5db21ba9c6.js" crossorigin="anonymous"></script>
@@ -26,8 +31,8 @@
   <!-- ==== Nav Section ==== -->
   <nav class="navbar navbar-expand-md navbar-dark fixed-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img src="./img/White logo - no background.svg" alt="Brand logo color background"
-          width="30" height="24" class="d-inline-block align-text-top">APP NAME</img></a>
+      <a class="navbar-brand logoFont" href="#"><img src="./img/White logo - no background.svg" alt="Brand logo color background"
+          width="30" height="24" class="d-inline-block align-text-top mx-3">ECHOVERSE</img></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
         aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -57,21 +62,45 @@
   <!-- ==== Nav Section ==== -->
   <main class="flex-shrink-0">
     <div class="container py-5 px-5 mt-5">
-      <h2 class="border-1 border-bottom border-dark">The Code for APP NAME.</h2>
+      <h2 class="border-1 border-bottom border-dark">The Code for ECHOVERSE.</h2>
       <div class="row row-cols-1 row-cols-md-2">
         <div class="col-lg-8">
           <pre class="line-number">
             <code class="language-javascript">
-              // Call the alert function to alert Hello World string
-              function helloWorld() {
-                alert("Hello World");
-              }
+              
+function getValue() {
+  document.getElementById("alert").classList.add("invisible");
+  let userString = document.getElementById("inputString").value 
+  let revString = reverseInput(userString);
+  displayReversedString(revString);
+}
+
+
+function reverseInput(text) {
+  let reversedString = ""
+  for (let index = text.length - 1; index >= 0 ; index--) {
+    reversedString += text[index];
+  }
+  return reversedString;
+}
+
+
+function displayReversedString(text){
+
+  document.getElementById("msg").innerHTML = `Your  string reversed is: ${text}`
+  document.getElementById("alert").classList.remove("invisible");
+}
+
             </code>
           </pre>
         </div>
         <div class="col-lg-4">
-          <p>The code is structured in one function</p>
-          <h5>Hello World is a function that displays an alert with a message of "Hello World"</h5>
+          <h4>getValue( ) function:</h4>
+          <p>It starts off by removing the invisible class to ensure that the alert is not visible to the user. Then it gets the string value from the input element</p>
+          <p>Then it calls the <strong><em>reverseInput(text) function</em></strong></p>
+          <p>The reverseInput(text) function takes the user input and loops through the entire string from the last index to the 0th index to concatenate the characters to an empty string, which then provides us with the reversed string</p>
+          <p>Finally it calls the <strong><em>displayReversedString(text)</em></strong> function</p>
+          <p>This method creates a string, which is then embeded into the DOM</p>
         </div>
       </div>
     </div>
@@ -89,7 +118,7 @@
         <div class="col d-flex justify-content-start justify-content-lg-center">
           <img src="./img/White logo - no background.svg" alt="" height="35">
         </div>
-        <div class="col d-flex justify-content-start justify-content-lg-end algin-items-center border border-success">
+        <div class="col d-flex justify-content-start justify-content-lg-end algin-items-center">
           <div class="row">
             <div class="col social">
               <a href="#" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>

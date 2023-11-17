@@ -1,6 +1,6 @@
 :root {
-  --primary: #1d5888;
-  --secondary: #ff993b;
+  --primary: #000;
+  --secondary: #ff0000;
   --dark-color: #292929;
   --white-color: #e7e7e7;
 }
@@ -44,18 +44,18 @@ footer .social > a:hover {
   color: var(--secondary);
 }
 
-.img-container {
-  position: relative;
+.img-container > img {
+  max-height: 325px;
+  border-radius: 50%;
 }
 
-.counter-app-img {
-  position: absolute;
-  top: 2%;
-  left: 40%;
-  width: 20%;
-  
-}
 
+
+.logoFont {
+  font-family: 'Monoton', sans-serif;
+  font-weight: 400;
+  font-size: medium;
+}
 .bsicon {
   color: purple;
 }
@@ -83,9 +83,17 @@ pre[class*="language-"] {
   word-wrap: break-word;
 }
 
+
 .sticky-footer {
   position: sticky;
   left: 0;
   bottom: 0;
   width: 100%;
+}
+
+@media(max-width: 990px) {
+  .img-container  {
+    padding-top: 2rem;
+  }
+  
 }
